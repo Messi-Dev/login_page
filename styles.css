@@ -2,11 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #cccbcb;
+  background-color: #f2f2f2;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 
 .login-container {
@@ -31,10 +30,10 @@ body {
 }
 
 .login-container h1 {
-  font-size: 22x;
+  font-size: 28px;
   font-style: normal;
   font-family: "Segoe UI Symbol";
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #333;
 }
 
@@ -44,35 +43,127 @@ body {
   margin-bottom: 20px;
 }
 .login-container label {
+  float: left;
   color: #656b73;
-  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+  text-align: inherit;
+  height: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
+
+.login-container .phone-number {
+  display: flex;
+  gap: 10px;
+}
+
 input[type="email"] {
   width: 93%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ddd;
+  border: none;
+  outline: none;
   border-radius: 4px;
+  background-color: #f2f2f2;
 }
+
+input[type="email"]:hover {
+  border: 1px solid #0fadff;
+}
+
+input[type="email"]:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #0fadff;
+}
+
+input[type="number"] {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+input[type="number"]:hover {
+  border: 1px solid #0fadff;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #0fadff;
+}
+
+.phone-number select {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+.phone-number select:hover {
+  border: 1px solid #0fadff;
+}
+
+.phone-number select:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #0fadff;
+}
+
+.additional-action {
+  cursor: pointer;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container .input-form p{
+  color: #777 !important;
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+
 
 .login-container button {
   background-color: #42bfff;
   color: white;
-  border: none;
-  padding: 10px 15px;
   border-radius: 20px;
   cursor: pointer;
-  width: 28%;
+  box-shadow: none;
+  padding: 11px 24px 10px;
   font-size: 14px;
+  line-height: 17px;
+  width: 28%;
+  margin: auto;
+  border: 1px solid #d6d6d6;
+  font-weight: 500;
 }
 
-.login-container a {
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  text-decoration: none;
+.login-container .additional-action {
+  margin: 4px 0 16px 0;
   font-size: 14px;
-  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+}
+
+.login-container .additional-action a {
+  color: #0fadff;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 0;
 }
 
 .signup-container {
@@ -81,10 +172,18 @@ input[type="email"] {
   margin-bottom: 170px;
 }
 
+.signup-container a {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #16191c;
+  text-decoration-line: none;
+}
+
 footer {
   background-color: #fff;
   border-top: 1px solid #ddd;
-  padding: 20px 50px;
+  
 }
 
 .footer-container {
@@ -92,11 +191,54 @@ footer {
   display: flex;
   flex-direction: row;
   margin: auto;
+  padding: 20px 50px;
+}
+
+.footer-container select {
+  appearance: none;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  background: white;
+  width: 100%;
+  margin-top: 10px;
+  margin: 0 50px 15px 0 !important;
+  font-size: 14px;
+  font-family: inherit;
+  color: rgba(0, 0, 0, 0.6);
+  height: 34px;
+  cursor: pointer;
+}
+
+.footer-container-sm .language-selector {
+  padding: 0 30px;
+  width: 90%;
+}
+
+.footer-container-sm select {
+  appearance: none;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  background: white;
+  width: 100%;
+  margin-top: 10px;
+  margin: 0 50px 15px 0 !important;
+  font-size: 14px;
+  font-family: inherit;
+  color: rgba(0, 0, 0, 0.6);
+  height: 34px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {  
   .footer-container {
     flex-direction: column;
+    display: none;
+  }  
+} 
+
+@media (min-width: 768px) {  
+  .footer-container-sm {
+    display: none;
   }  
 } 
 
@@ -137,6 +279,11 @@ footer {
   text-decoration: underline;
 }
 
+.language-selector {
+  width: 70%;
+
+}
+
 .language-selector h4 {
   padding-top: 20px;
   font-size: 14px;
@@ -147,6 +294,7 @@ footer {
 .language-selector select {
   padding: 5px;
   font-size: 14px;
+  background-size: 5px;
 }
 
 .footer-bottom {
@@ -174,4 +322,67 @@ footer {
   text-decoration-color: yellow;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
+}
+
+.footer-container-sm .section a {
+  text-decoration: none;
+  color: #656b73;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  transition: all .1s ease-in;
+  font-weight: 400;
+  display: block;
+  box-sizing: content-box;
+  border-top: solid 1px #E5E5E5;
+  padding: 10px 40px 10px 58px;
+}
+ 
+.footer-container-sm .toggle-button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  background-color: #F8F9FB;
+  border-top: solid 1px #D4D4D4;
+  margin-top: 0;
+  padding: 10px 20px;
+  width: 100%;
+  line-height: 25px;
+  box-sizing: content-box;
+  color: rgba(0, 0, 0, .87);
+  font-weight: 500;
+}
+
+.toggle-button .footer-arrow {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button.active .footer-arrow {
+  rotate: 90deg;
+}
+
+.footer-container-sm .items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none; /* Initially hidden */
+}
+
+.footer-container-sm .language {
+  margin-top: 15px;
+}
+
+.footer-container-sm label {
+  font-size: 14px;
+}
+
+.footer-container-sm select {
+  margin-top: 5px;
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
 }
