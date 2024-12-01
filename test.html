@@ -10,26 +10,35 @@
 <body>
 
   <div class="login-container">
-    <img src="https://upload.wikimedia.org/wikipedia/en/a/ad/Snapchat_logo.svg" alt="Snapchat Logo">
+    <img src="img/snapchat-app-icon.svg" alt="Snapchat Logo" class="logo-img">
     <h1>Log in to Snapchat</h1>
     <p>We cannot find an account for this email address.</p>
     <form>
-      <input type="email" placeholder="Username or Email">
+      <label>Username or Email</label>
+      <input type="email">
+      <a href="#">Use phone number instead</a>
       <button type="submit">Next</button>
     </form>
-    <a href="#">Use phone number instead</a>
-    <p>New to Snapchat? <a href="#">Sign Up</a></p>
   </div>
+  <p class="signup-container">New to Snapchat? <a href="#">Sign Up</a></p>
 
   <footer>
     <div class="footer-container">
       <div class="footer-section">
         <h4>Company</h4>
-        <ul>
+        <ul class="footer-a">
           <li><a href="#">Snap Inc.</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">News</a></li>
         </ul>
+        <div class="language-selector">
+          <h4>Language</h4>
+          <select>
+            <option>English (US)</option>
+            <option>Spanish</option>
+            <option>French</option>
+          </select>
+        </div>
       </div>
       <div class="footer-section">
         <h4>Community</h4>
@@ -61,20 +70,15 @@
           <li><a href="#">Lens Studio Terms</a></li>
         </ul>
       </div>
-      <div class="language-selector">
-        <h4>Language</h4>
-        <select>
-          <option>English (US)</option>
-          <option>Spanish</option>
-          <option>French</option>
-        </select>
-      </div>
     </div>
-    <div class="footer-bottom">
+    
+  </footer>
+  <div class="footer-bottom">
+    <div class="footer-a-container">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Service</a>
-    </div>
-  </footer>
+    </div> 
+  </div>
 
 </body>
 </html>
